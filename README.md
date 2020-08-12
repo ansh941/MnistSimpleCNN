@@ -1,8 +1,5 @@
-# README.md
-
 ## MnistSimpleCNN
 
----
 
 This project is composed of three networks called M3, M5, M7 following kernel size.
 
