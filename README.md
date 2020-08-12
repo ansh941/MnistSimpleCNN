@@ -15,7 +15,7 @@ seed : random seed number
 
 trial : the number of trial. When previous trial is end, add present trial number to seed number.
 
-Ex) seed=0 trial=10 ⇒ excute seed 0~9
+Ex) seed=0 trial=10 ⇒ execute seed 0~9
 
 kernel_size : kernel size of model. You can select the model following this parameter.
 
