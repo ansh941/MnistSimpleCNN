@@ -1,7 +1,8 @@
 ## MnistSimpleCNN
 
-
-This project is composed of three networks called M3, M5, M7 following kernel size.
+This repository is implementation of "An Ensemble of Simple Convolutional Neural Network Models for MNIST Digit Recognition".
+Paper url is https://arxiv.org/abs/2008.10400.
+In paper, we propose simple models classifying MNIST called M3, M5, M7 following kernel size.
 
 ### Train
 
