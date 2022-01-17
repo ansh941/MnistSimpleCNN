@@ -90,7 +90,7 @@ def run(p_seed=0, p_epochs=150, p_kernel_size=5, p_logdir="temp"):
         train_loss = 0
         train_corr = 0
         for batch_idx, (data, target) in enumerate(train_loader):
-            data, target = data.to(device), target.to(device)
+            data, target = data.to(device), target.to(device, dtype=torch.int64)
             optimizer.zero_grad()
             output = model(data)
             loss = F.nll_loss(output, target)
