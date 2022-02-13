@@ -90,7 +90,7 @@ def run(p_seed=0, p_epochs=150, p_kernel_size=5, p_logdir="temp"):
         train_loss = 0
         train_corr = 0
         for batch_idx, (data, target) in enumerate(train_loader):
-            data, target = data.to(device), target.to(device)
+            data, target = data.to(device), target.to(device, dtype=torch.int64)
             optimizer.zero_grad()
             output = model(data)
             loss = F.nll_loss(output, target)
@@ -119,7 +119,7 @@ def run(p_seed=0, p_epochs=150, p_kernel_size=5, p_logdir="temp"):
         total_target = np.zeros(0)
         with torch.no_grad():
             for data, target in test_loader:
-                data, target = data.to(device), target.to(device)
+                data, target = data.to(device), target.to(device,  dtype=torch.int64)
                 output = model(data)
                 test_loss += F.nll_loss(output, target, reduction='sum').item()
                 pred = output.argmax(dim=1, keepdim=True)
